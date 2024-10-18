@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la palabra</title>
+    <style>
+        * {margin: 0%; padding: 0%; font-family: sans-serif;}
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: rgb(87, 9, 107);
+        }
+
+        .cont_juego {
+            width: 500px;
+            text-align: center;
+        }
+
+        .cont_teclas {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1px;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 10px 0 10px 0;
+        }
+
+        button {
+            padding: 20px;
+            border-radius: 1em;
+            border: none;
+            user-select: none;
+            cursor: pointer;
+            background-color: rgb(115, 185, 247);
+        }
+
+        button:active {
+            background-color: rgb(89, 168, 236);
+        }
+
+        #z {
+            grid-column: 3 / 4;;
+        }
+
+        #boton_nueva_palabra {
+            margin: 20px 0 0 0;
+        }
+
+        h1, p {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont_juego">
+        <h1>Adivina La Palabra</h1>
+        <p id="palabra"></p>
+        <div class="cont_teclas">
+            <button id="a" onclick="mostrarPalabra('a')">A</button>
+            <button id="b" onclick="mostrarPalabra('b')">B</button>
+            <button id="c" onclick="mostrarPalabra('c')">C</button>
+            <button id="d" onclick="mostrarPalabra('d')">D</button>
+            <button id="e" onclick="mostrarPalabra('e')">E</button>
+            <button id="f" onclick="mostrarPalabra('f')">F</button>
+            <button id="g" onclick="mostrarPalabra('g')">G</button>
+            <button id="h" onclick="mostrarPalabra('h')">H</button>
+            <button id="i" onclick="mostrarPalabra('i')">I</button>
+            <button id="j" onclick="mostrarPalabra('j')">J</button>
+            <button id="k" onclick="mostrarPalabra('k')">K</button>
+            <button id="l" onclick="mostrarPalabra('l')">L</button>
+            <button id="m" onclick="mostrarPalabra('m')">M</button>
+            <button id="n" onclick="mostrarPalabra('n')">N</button>
+            <button id="o" onclick="mostrarPalabra('o')">O</button>
+            <button id="p" onclick="mostrarPalabra('p')">P</button>
+            <button id="q" onclick="mostrarPalabra('q')">Q</button>
+            <button id="r" onclick="mostrarPalabra('r')">R</button>
+            <button id="s" onclick="mostrarPalabra('s')">S</button>
+            <button id="t" onclick="mostrarPalabra('t')">T</button>
+            <button id="u" onclick="mostrarPalabra('u')">U</button>
+            <button id="v" onclick="mostrarPalabra('v')">V</button>
+            <button id="w" onclick="mostrarPalabra('w')">W</button>
+            <button id="x" onclick="mostrarPalabra('x')">X</button>
+            <button id="y" onclick="mostrarPalabra('y')">Y</button>
+            <button id="z" onclick="mostrarPalabra('z')">Z</button>
+        </div>
+
+        <button id="boton_nueva_palabra">nueva palabra</button>
+        <p id="vidas_jugador">vidas: 5</p>
+    </div>
+    
+    <script src="funcion_juego.js"></script>
+</body>
+</html>
